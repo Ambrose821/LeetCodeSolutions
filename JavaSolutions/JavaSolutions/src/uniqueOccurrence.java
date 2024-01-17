@@ -1,9 +1,13 @@
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 public class uniqueOccurrence {
 
     public static boolean uniqueOccurrences(int[] arr) {
         //<Value,Occurrence>
+    
         HashMap<Integer,Integer> map = new HashMap<>();
 
         for(int i =0; i<arr.length; i++){
@@ -21,19 +25,17 @@ public class uniqueOccurrence {
 
         }
         System.out.println(map);
-        for(int i =0; i < map.size(); i++){
-            int occurence = map.get(arr[i]);
-            map.remove(arr[i]);
-            if(map.containsValue(occurence)){
-                return false;
-            }
+        HashSet<Integer> set = new HashSet();
+        for(int x: map.values()){
+            set.add(x);
+
 
         }
-        return true;
+        return set.size() == map.size();
     
 }
     public static void main(String[] args) throws Exception {
-        int [] arr = {1,2,2,1,1,3};
+        int [] arr = {0,0,-2,-1,4,8,-3,9,6};
         boolean unique = uniqueOccurrences(arr);
         System.out.println(unique);
 
