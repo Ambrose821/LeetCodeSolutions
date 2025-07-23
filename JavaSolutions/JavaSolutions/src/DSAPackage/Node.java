@@ -7,10 +7,10 @@ import java.util.List;
 
 
 public class Node {
-    public List<Node> children;
+    public List<Node> neighbors;
     public int value;
-    public Node(List<Node> children, int value) {
-        this.children = children;
+    public Node(List<Node> neighbors, int value) {
+        this.neighbors = neighbors;
         this.value = value;
     
     }

@@ -14,7 +14,7 @@ public class BfsOnTreeTemplate {
     queue.add(root);
     while (queue.size() > 0) {
         Node node = queue.poll();
-        for (Node child : node.children) {
+        for (Node child : node.neighbors) {
             if (isGoal(child)) {
                 return FOUND(child);
             }
