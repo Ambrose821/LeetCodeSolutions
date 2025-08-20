@@ -18,3 +18,9 @@ public class DFSOnTreeTemplate {
 
     
 }
+
+/*
+ *              2
+ *             / \
+ *            1    3          
+ */         
